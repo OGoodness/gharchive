@@ -1,0 +1,70 @@
+{
+  "name": "gharchive",
+  "description": "Tool to grab GithubArchive packages and process them",
+  "version": "1.0.0",
+  "author": "OGoodness @OGoodness",
+  "bin": {
+    "gha": "./bin/run"
+  },
+  "bugs": "https://github.com/OGoodness/gharchive/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "node-fetch": "^2.6.1",
+    "node-gzip": "^1.1.2",
+    "tslib": "^1",
+    "cli-ux": "^5.5.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "eslint-config-oclif-typescript": "^0.1",
+    "globby": "^10",
+    "mocha": "^5",
+    "nyc": "^14",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/OGoodness/gharchive",
+  "keywords": [
+    "gharchive",
+    "github",
+    "archive",
+    "githubarchive",
+    "datahoard"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "gha",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "OGoodness/gharchive",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
