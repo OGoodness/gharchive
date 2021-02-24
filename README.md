@@ -40,13 +40,14 @@ USAGE
   $ gha get [FILE]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -d, --date=date              Start date/datetime of what you want to download
+  -e, --endDate=endDate        End date/datetime of what you want to download
+  -h, --help                   show CLI help
+  -o, --outputFile=outputFile  File to write the output to
 
 EXAMPLE
   $ gha get
-  get world from ./src/get.ts!
+  get world from ./src/hello.ts!
 ```
 
 _See code: [src/commands/get.ts](https://github.com/OGoodness/gharchive/blob/v1.0.0/src/commands/get.ts)_

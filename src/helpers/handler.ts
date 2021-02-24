@@ -41,7 +41,7 @@ class Handler {
     
     if(start >= end){
       this.log('Start date cannot be after end date')
-      [start, end] = findRange(start, end)
+      return
     }
 
     while(start < end){
