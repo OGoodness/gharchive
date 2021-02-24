@@ -19,7 +19,7 @@ $ npm install -g gharchive
 $ gha COMMAND
 running command...
 $ gha (-v|--version|version)
-gharchive/1.0.0 linux-x64 node-v10.19.0
+gharchive/1.1.0 linux-x64 node-v10.19.0
 $ gha --help [COMMAND]
 USAGE
   $ gha COMMAND
@@ -28,16 +28,16 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`gha get [FILE]`](#gha-get-file)
+* [`gha get`](#gha-get)
 * [`gha help [COMMAND]`](#gha-help-command)
 
-## `gha get [FILE]`
+## `gha get`
 
 describe the command here
 
 ```
 USAGE
-  $ gha get [FILE]
+  $ gha get
 
 OPTIONS
   -d, --date=date              Start date/datetime of what you want to download
@@ -45,12 +45,14 @@ OPTIONS
   -h, --help                   show CLI help
   -o, --outputFile=outputFile  File to write the output to
 
-EXAMPLE
-  $ gha get
-  get world from ./src/hello.ts!
+EXAMPLES
+  $ gha get -d '1/1/20'
+  Starting Download... done
+  $ gha get -d '1/1/20' -e '1/2/20' -o output.json
+  Starting Download... done
 ```
 
-_See code: [src/commands/get.ts](https://github.com/OGoodness/gharchive/blob/v1.0.0/src/commands/get.ts)_
+_See code: [src/commands/get.ts](https://github.com/OGoodness/gharchive/blob/v1.1.0/src/commands/get.ts)_
 
 ## `gha help [COMMAND]`
 
