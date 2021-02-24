@@ -9,9 +9,10 @@ export default class Get extends Command {
   static description = 'describe the command here'
 
   static examples = [
-    `$ gha get
-get world from ./src/hello.ts!
-`,
+    `$ gha get -d '1/1/20'
+Starting Download... done`,
+    `$ gha get -d '1/1/20' -e '1/2/20' -o output.json
+Starting Download... done`,
   ]
 
   static flags = {
@@ -31,7 +32,7 @@ get world from ./src/hello.ts!
     })
   }
 
-  static args = [{name: 'file'}]
+  static args = []
 
   async run() {
     const {args, flags} = this.parse(Get)
