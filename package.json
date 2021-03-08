@@ -47,7 +47,11 @@
     "github",
     "archive",
     "githubarchive",
-    "datahoard"
+    "datahoard",
+    "analytics",
+    "analysis",
+    "cli",
+    "tool"
   ],
   "license": "MIT",
   "main": "lib/index.js",
