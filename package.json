@@ -1,7 +1,7 @@
 {
   "name": "gharchive",
   "description": "Tool to grab GithubArchive packages and process them",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "OGoodness @OGoodness",
   "bin": {
     "gha": "./bin/run"
